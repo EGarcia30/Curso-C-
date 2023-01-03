@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using myFirstBackend.DataAccess;
 using myFirstBackend.Models.DataModels;
+using myFirstBackend.Services;
 
 namespace myFirstBackend.Controllers
 {
@@ -15,10 +16,13 @@ namespace myFirstBackend.Controllers
     public class StudentsController : ControllerBase
     {
         private readonly UniversityDBContext _context;
+        // service
+        private readonly IStudentsService _studentsService;
 
-        public StudentsController(UniversityDBContext context)
+        public StudentsController(UniversityDBContext context, IStudentsService studentsService)
         {
             _context = context;
+            _studentsService = studentsService;
         }
 
         // GET: api/Students

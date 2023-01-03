@@ -5,7 +5,7 @@ namespace myFirstBackend.Models.DataModels
     public class User: BaseEntity
     {
         [Required, StringLength(50)]
-        public string name { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
 
         [Required, StringLength(50)]
         public string LastName { get; set; } = string.Empty;

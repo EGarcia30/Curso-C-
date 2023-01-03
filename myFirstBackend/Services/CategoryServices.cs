@@ -2,9 +2,9 @@
 
 namespace myFirstBackend.Services
 {
-    public class StudentsService : IStudentsService
+    public class CategoryServices : ICategoryServices
     {
-        public IEnumerable<Student> GetStudentsWithCourses()
+        public IEnumerable<Category> GetCoursesOfCategory(string CategoryName)
         {
             throw new NotImplementedException();
         }
